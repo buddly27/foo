@@ -29,6 +29,7 @@ jobs:
               -G "Visual Studio 17 2022" -A x64 \
               -D "CMAKE_TOOLCHAIN_FILE=${VCPKG_INSTALLATION_ROOT}\scripts\buildsystems\vcpkg.cmake" \
               -D "VCPKG_TARGET_TRIPLET=x64-windows" \
+              -D "CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=1" \
               ${GITHUB_WORKSPACE}
 
       -   name: Build
